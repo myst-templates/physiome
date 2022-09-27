@@ -46,7 +46,8 @@
 
 \ifxetexorluatex
   \RequirePackage{fontspec}
-  \setmainfont{TeX Gyre Pagella}
+  % This font often doesn't render, commenting out for now.
+  % \setmainfont{TeX Gyre Pagella}
 \else
   \RequirePackage{tgpagella}
 \fi
@@ -78,12 +79,12 @@
                 marginparwidth=3.25cm,%
                 marginparsep=2em%
                 ]{geometry}%
-                
+
 \RequirePackage[font={rm},labelfont={bf,sf},%
                 labelsep=period,%
                 skip=4pt,tableposition=top,%
                 singlelinecheck=false,justification=centering]{caption}
-                
+
 \RequirePackage[round]{natbib}
 \RequirePackage{multibib}
 \newcites{primepub}{Primary Publications}
@@ -138,7 +139,7 @@
   {}
   {0em}
   {#1}
-  []  
+  []
 \titleformat{\subsection}
   {\sffamily\bfseries}
   {\thesubsection}
@@ -150,12 +151,12 @@
   {\thesubsubsection}
   {0.5em}
   {#1}
-  []    
+  []
 \titleformat{\paragraph}[runin]
   {\sffamily\small\bfseries}
   {}
   {0em}
-  {#1} 
+  {#1}
 \titlespacing*{\section}{0pc}{3ex \@plus4pt \@minus3pt}{5pt}
 \titlespacing*{\subsection}{0pc}{2.5ex \@plus5pt \@minus2pt}{3pt}
 \titlespacing*{\subsubsection}{0pc}{2ex \@plus4.5pt \@minus1.5pt}{2pt}
@@ -183,8 +184,8 @@
   {}
   {}
   {}
-  [\ \textbullet\ ]  
-  
+  [\ \textbullet\ ]
+
 \RequirePackage{enumitem}
 %\setlist{nolistsep} % Uncomment to remove spacing between items in lists (enumerate, itemize)
 
@@ -196,7 +197,7 @@
 \newcommand{\articletype}[1]{\def\physiome@articletype{#1}}
 
 %
-% custom title page 
+% custom title page
 %
 \newcommand{\publicationdate}[1]{\def\physiome@pubdate{#1}}
 \newcommand{\curator}[1]{\def\physiome@curator{#1}}
@@ -235,9 +236,9 @@
       \ifdefvoid{\physiome@corrauthor}{}{\textbf{*Corresponding author}\\\physiome@corrauthor\par}%
       \ifdefvoid{\physiome@submitdate}{}{\textbf{Submitted}  \physiome@submitdate\par}%
       \ifdefvoid{\physiome@acceptdate}{}{\textbf{Accepted}  \physiome@acceptdate\par}%
-      \ifdefvoid{\physiome@citethisas}{}{\textbf{Citation}\\\physiome@citethisas\\doi: \physiome@thisdoi\par}%      
+      \ifdefvoid{\physiome@citethisas}{}{\textbf{Citation}\\\physiome@citethisas\\doi: \physiome@thisdoi\par}%
     \end{textblock*}
-    
+
     {\raggedright\sffamily\bfseries\fontsize{20}{25}\selectfont\@title\par}%
     \vskip10pt
     {\raggedright\@author\par}
