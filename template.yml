@@ -1,0 +1,159 @@
+jtex: v1
+title: Physiome Journal
+description: >-
+  Physiome publishes articles describing physiological models which demonstrate
+  that the mathematical model, model implementation, and simulation results are
+  consistent and reproducible. Physiome articles must be linked to primary
+  papers published in or accepted to a peer-reviewed physiology, bioengineering
+  or biophysics journal.
+authors:
+  - name: Physiome Journal
+    github: physiome
+    twitter: physiomeproject
+    affiliations:
+      - Physiome Journal
+version: 1.0.0
+license: CC-BY-4.0
+thumbnail: ./thumbnail.png
+tags:
+  - article
+  - paper
+source: >-
+  https://www.overleaf.com/latex/templates/physiome-journal-article-template/kfbqwxxmtsfv
+parts:
+  - id: abstract
+    description: >
+      Please provide an abstract of no more than 300 words. Your abstract should
+      explain the main contributions of your article, and should not contain any
+      material that is not included in the main text.
+    max_words: 300
+    required: true
+doc:
+  - id: title
+    required: true
+  - id: authors
+    required: true
+  - id: keywords
+    required: true
+    description: |
+      Choose between 3 and 10 keywords that relate to the article
+options:
+  - id: article_type
+    title: Article Type
+    type: choice
+    default: Original
+    required: true
+    choices:
+      - Original
+      - Retrospective
+      - Review
+      - Letter
+    description: >
+      See author instructions at:
+      https://journal.physiomeproject.org/instructions-to-authors.html
+  - id: line_numbers
+    title: Enable Line Numbers
+    type: boolean
+    default: false
+    description: Show line numbers on the document
+  - id: primary_pubs
+    title: Primary Publications
+    description: A comma-seperated list of bibtex keys
+    type: string
+  - id: primary_doi
+    title: Primary Publication DOI (e.g. "10.1037a0000000")
+    description: DOI of the primary publication
+    type: string
+  - id: published
+    description: Is this submission published?
+    type: boolean
+    default: false
+  - id: publication_date
+    title: Publication Date
+    description: Use the form "4 May 2020"
+    type: string
+    condition:
+      id: published
+      value: true
+  - id: editor
+    description: Physiome Journal Editor
+    type: string
+    condition:
+      id: published
+      value: true
+  - id: curator
+    description: Physiome Journal Curator
+    type: string
+    condition:
+      id: published
+      value: true
+  - id: submitted_date
+    title: Submission Date
+    description: Use the form "4 May 2020"
+    type: string
+    condition:
+      id: published
+      value: true
+  - id: accepted_date
+    title: Accepted Date
+    description: Use the form "4 May 2020"
+    type: string
+    condition:
+      id: published
+      value: true
+  - id: cite_as
+    title: Submission Citation
+    description: First and Second (2020) Example Article Title. Physiome 00(0).
+    type: string
+    condition:
+      id: published
+      value: true
+  - id: doi
+    title: Submission DOI
+    description: The DOI (Digital Object Identifier) of the final publication.
+    type: string
+    condition:
+      id: published
+      value: true
+files:
+  - template.tex
+  - physiome.cls
+  - Physiome-under.png
+packages:
+  - abstract
+  - amsmath
+  - amssymb
+  - authblk
+  - babel
+  - booktabs
+  - calc
+  - caption
+  - droidsansmono
+  - enumitem
+  - fancyhdr
+  - fontenc
+  - fontspec
+  - geometry
+  - graphicx
+  - hyperref
+  - ifluatex
+  - ifxetex
+  - inputenc
+  - lastpage
+  - lato
+  - lineno
+  - marginnote
+  - mdframed
+  - microtype
+  - multibib
+  - natbib
+  - newtxsf
+  - parskip
+  - textcomp
+  - textpos
+  - tgpagella
+  - threeparttable
+  - titlesec
+  - titletoc
+  - xcolor
+  - xparse
