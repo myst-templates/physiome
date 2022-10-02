@@ -11,7 +11,6 @@ doc:
     year: 2021
     month: 08
     day: 3
-oxalink: https://curvenote.com/@curvenote
 tagged:
   abstract: |
     Physiome publishes articles describing physiological models which demonstrate that the mathematical model, model implementation, and simulation results are consistent and reproducible. Physiome articles must be linked to primary papers published in or accepted to a peer-reviewed physiology, bioengineering or biophysics journal.
