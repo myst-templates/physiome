@@ -37,6 +37,7 @@ doc:
     required: true
     description: |
       Choose between 3 and 10 keywords that relate to the article
+  - id: doi
 options:
   - id: article_type
     title: Article Type
@@ -59,10 +60,6 @@ options:
   - id: primary_pubs
     title: Primary Publications
     description: A comma-seperated list of bibtex keys
-    type: string
-  - id: primary_doi
-    title: Primary Publication DOI (e.g. "10.1037a0000000")
-    description: DOI of the primary publication
     type: string
   - id: published
     description: Is this submission published?
@@ -104,13 +101,6 @@ options:
   - id: cite_as
     title: Submission Citation
     description: First and Second (2020) Example Article Title. Physiome 00(0).
-    type: string
-    condition:
-      id: published
-      value: true
-  - id: doi
-    title: Submission DOI
-    description: The DOI (Digital Object Identifier) of the final publication.
     type: string
     condition:
       id: published
