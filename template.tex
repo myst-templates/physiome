@@ -11,7 +11,7 @@
 {[-author.name-]}
 [# endfor #]
 [# for affiliation in doc.affiliations #]
-\affil[[-affiliation.index-]]{[-affiliation.value-]}
+\affil[[-affiliation.index-]]{[-affiliation.value.name-]}
 [# endfor #]
 
 [# if options.published #]
